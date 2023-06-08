@@ -378,7 +378,7 @@ class FeedbackModel extends ChangeNotifier2 {
     }
 
     if (_feedbackProcessed) {
-      _closeDelay?.dispose();
+      //  _closeDelay?.dispose();
       _closeDelay = Delay(const Duration(seconds: 1));
       await _closeDelay!.future;
       await returnToAppPostSubmit();
@@ -433,8 +433,8 @@ class FeedbackModel extends ChangeNotifier2 {
 
   @override
   void dispose() {
-    _fakeSubmitDelay?.dispose();
-    _closeDelay?.dispose();
+    // _fakeSubmitDelay?.dispose();
+    // _closeDelay?.dispose();
     super.dispose();
   }
 
